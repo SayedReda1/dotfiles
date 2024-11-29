@@ -1,13 +1,13 @@
 [general]
 import = [
-	"./iterm.toml"
+	"./themes/iterm.toml"
 ]
 
 [font]
-size = 12.0
+size = 13.0
 
 [font.normal]
-family = "Hack"
+family = "JetBrainsMono Nerd Font"
 style = "Regular"
 
 [window]
