@@ -1,14 +1,11 @@
-local o = vim.o
--- local g = vim.g
-
 -- Lines Shape
-o.number = true
-o.relativenumber = true
-o.wrap = true -- To make line breaked
-o.cursorline = true -- Highlight current line
+vim.o.number = true
+vim.o.relativenumber = true
+vim.o.wrap = true -- To make line breaked
+vim.o.cursorline = true -- Highlight current line
 
 -- Indentings
-o.autoindent = true -- auto indent when new line is there
-o.smarttab = true -- Use shift width when <Tab>
-o.shiftwidth = 2 -- Tab width spaces
-o.expandtab = true
+vim.o.autoindent = true -- auto indent when new line is there
+vim.o.smarttab = true -- Use shift width when <Tab>
+vim.o.shiftwidth = 4 -- Tab width spaces
+vim.o.expandtab = true

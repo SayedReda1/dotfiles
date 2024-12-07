@@ -1,2 +1,2 @@
 require("pwnguy.config.lazy")
--- import("pwnguy.core")
+require("pwnguy.core")

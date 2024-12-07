@@ -258,4 +258,4 @@ if [ -f /etc/zsh_command_not_found ]; then
     . /etc/zsh_command_not_found
 fi
 
-export PWNDBG_NOUPDATES=1
+export PWNDBG_NO_AUTOUPDATE=1
