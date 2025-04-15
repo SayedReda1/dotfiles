@@ -1,4 +1,5 @@
-set --erase fish_greeting
+# Disable geeting message
+set fish_greeting
 
 # Aliases
 alias ll='ls -lah'
