@@ -31,6 +31,7 @@ else
     sudo apt update
     sudo apt install stow -y
 fi
+echo ""
 
 zsh_setup() {
     # ohmyzsh
