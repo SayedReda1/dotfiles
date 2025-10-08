@@ -1,0 +1,101 @@
+@import "../omarchy/current/theme/waybar.css";
+
+* {
+  font-family: "SF Pro Display", "JetBrainsMono Nerd Font";
+  font-size: 16px;
+
+  min-height: 0;
+  border: none;
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+}
+
+#waybar {
+  /* margin: 0 10px; */
+  background:  transparent;
+}
+
+.modules-left {
+  margin-left: 10px;
+}
+
+.modules-right {
+  margin-right: 10px;
+}
+
+#workspaces button {
+  background-color: @background;
+  padding: 0 6px;
+  margin: 0 5px;
+  border-radius: 10px;
+  min-width: 20px;
+  transition: all 250ms ease-in-out;
+}
+
+#workspaces button.active {
+  background-color: @foreground;
+  color: #121212;
+  min-width: 50px;
+  /* cursor: pointer; */
+  transition: all 250ms ease-in-out;
+}
+
+#tray,
+#cpu,
+#battery,
+#network,
+#bluetooth,
+#pulseaudio,
+#custom-power-menu,
+#custom-screenrecording-indicator,
+#custom-update,
+#clock {
+  min-width: 12px;
+  background-color: @background;
+  padding: 0 10px;
+  border-radius: 10px;
+}
+
+tooltip {
+  padding: 2px;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+#custom-power-menu {
+  margin-right: 5px;
+  color: white;
+  background-color: #c32e3c;
+}
+
+#custom-screenrecording-indicator {
+  min-width: 12px;
+  margin-left: 8.75px;
+  font-size: 10px;
+}
+
+#custom-screenrecording-indicator.active {
+  color: #a55555;
+}
+
+@keyframes blink {
+    to {
+        color: #ffffff;
+    }
+}
+
+#battery.warning:not(.charging) {
+    color: #f53c3c;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: steps(12);
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#battery.charging {
+  color: #28a745;
+}
