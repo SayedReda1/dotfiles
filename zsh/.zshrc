@@ -48,7 +48,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
-# ENABLE_CORRECTION="true"
+ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
 # You can also set it to another string to have that shown instead of the default red dots.
@@ -77,9 +77,11 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(git zsh-autosuggestions zsh-syntax-highlighting fzf)
 
 source $ZSH/oh-my-zsh.sh
+
+typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
 
 # User configuration
 
@@ -109,11 +111,21 @@ source $ZSH/oh-my-zsh.sh
 # Aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias ll="ls -lah"
-alias nv="nvim"
+alias eza="eza --color=auto --icons=auto"
+alias ls="eza --color=auto --icons=auto"
+alias ll="eza -lh"
+alias la="eza -lah"
+alias lt="eza -aT"
+alias clip="xclip -selection clipboard"
+
+# Variables
+export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
+export PWNDBG_NO_AUTOUPDATE=1
+
+# fzf
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-# Variables
-export PWNDBG_NO_AUTOUPDATE=1
+# fastfetch
