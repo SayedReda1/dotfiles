@@ -1,10 +1,10 @@
 [general]
 import = [
-	"./themes/iterm.toml"
+	"./themes/catppuccin-mocha.toml"
 ]
 
 [font]
-size = 13.0
+size = 15.0
 
 [font.normal]
 family = "JetBrainsMono Nerd Font"

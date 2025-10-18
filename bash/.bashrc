@@ -2,6 +2,9 @@
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
+# fastfetch
+fastfetch
+
 # If not running interactively, don't do anything
 case $- in
 *i*) ;;
@@ -133,8 +136,6 @@ eval "$(starship init bash)"
 export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
 export PWNDBG_NO_AUTOUPDATE=1
 
-# fastfetch
-fastfetch
-
 # fzf
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+. "$HOME/.cargo/env"
