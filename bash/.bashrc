@@ -139,3 +139,4 @@ export PWNDBG_NO_AUTOUPDATE=1
 # fzf
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 . "$HOME/.cargo/env"
+
