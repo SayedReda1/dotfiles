@@ -1,5 +1,4 @@
 # fastfetch
-fastfetch
 
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
@@ -123,7 +122,6 @@ alias clip="xclip -selection clipboard"
 
 # Variables
 export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
-export PATH="$PATH:/home/sayed/.local/kitty.app/bin"
 export PWNDBG_NO_AUTOUPDATE=1
 
 # fzf
