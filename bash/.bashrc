@@ -3,7 +3,24 @@
 # for examples
 
 # fastfetch
-fastfetch
+
+figlet -c -w $(tput cols) -fslant "Pwn Guy" | lolcat -pad 1
+
+# figlet -c -w $(tput cols) -fslant "Sponge Bob" | lolcat -pad 1
+
+# cat<<'EOF' | awk -v width=$(tput cols) '{ padding = int((width - length($0)) / 2); printf "%*s%s\n", padding, "", $0 }' | lolcat -pad 1
+# ⠀⠀⠀⠀⢀⣀⣤⣤⣤⣤⣄⡀⠀⠀⠀⠀
+# ⠀⢀⣤⣾⣿⣾⣿⣿⣿⣿⣿⣿⣷⣄⠀⠀
+# ⢠⣾⣿⢛⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⡀
+# ⣾⣯⣷⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣧
+# ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+# ⣿⡿⠻⢿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠻⢿⡵
+# ⢸⡇⠀⠀⠉⠛⠛⣿⣿⠛⠛⠉⠀⠀⣿⡇
+# ⢸⣿⣀⠀⢀⣠⣴⡇⠹⣦⣄⡀⠀⣠⣿⡇
+# ⠈⠻⠿⠿⣟⣿⣿⣦⣤⣼⣿⣿⠿⠿⠟⠀
+# ⠀⠀⠀⠀⠸⡿⣿⣿⢿⡿⢿⠇⠀⠀⠀⠀
+# ⠀⠀⠀⠀⠀⠀⠈⠁⠈⠁⠀⠀⠀⠀⠀⠀
+# EOF
 
 # If not running interactively, don't do anything
 case $- in
@@ -138,5 +155,4 @@ export PWNDBG_NO_AUTOUPDATE=1
 
 # fzf
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
-. "$HOME/.cargo/env"
-
+# . "$HOME/.cargo/env"

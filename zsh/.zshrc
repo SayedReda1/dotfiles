@@ -1,5 +1,10 @@
 # fastfetch
 
+figlet -c -w $(tput cols) -fslant "Pwn Guy" | lolcat -pad 1
+
+# figlet -c -w $(tput cols) -fslant "Sponge Bob" | lolcat -pad 1
+
+
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -119,9 +124,11 @@ alias ll="eza -lh"
 alias la="eza -lah"
 alias lt="eza -aT"
 alias clip="xclip -selection clipboard"
+alias pwninit="pwninit --template-path /home/sayed/.config/pwninit/template.py"
 
 # Variables
 export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
+export PATH="$PATH:/home/sayed/.local/bin"
 export PWNDBG_NO_AUTOUPDATE=1
 
 # fzf
@@ -130,3 +137,6 @@ export PWNDBG_NO_AUTOUPDATE=1
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
