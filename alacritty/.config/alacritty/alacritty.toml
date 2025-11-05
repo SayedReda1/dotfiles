@@ -3,6 +3,10 @@ import = [
 	"./themes/catppuccin-mocha.toml"
 ]
 
+[terminal.shell]
+program = "/usr/bin/tmux"
+# args = ["--login"]
+
 [font]
 size = 15.0
 
@@ -13,6 +17,7 @@ style = "Regular"
 [window]
 opacity = 0.9
 dynamic_padding = true
+startup_mode = "Maximized"
 #[colors.primary]
 #background = "#000000"
 #foreground = "#FFFFFF"
