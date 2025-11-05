@@ -1,5 +1,5 @@
 # ohmyzsh
-if [ ! -e "$HOME/.oh-my-zsh" ]; then
+if [[ ! -d "$HOME/.oh-my-zsh" ]]; then
   echo " Installing Oh My Zsh..."
   git clone https://github.com/ohmyzsh/ohmyzsh.git "$HOME/.oh-my-zsh"
   # p10k
@@ -17,7 +17,7 @@ if ! command -v "figlet" >/dev/null 2>&1; then
   echo " Installing figlet & lolcat for fancy banner :)"
   sudo apt install figlet lolcat
 else
-  echo " figlet & lolcat Installed, Skipping Installation..."
+  echo " figlet & lolcat already installed, Skipping installation..."
 fi
 
 # Eza
@@ -30,5 +30,5 @@ if ! command -v "eza" >/dev/null 2>&1; then
   sudo apt update
   sudo apt install -y eza
 else
-  echo " eza Installed, Skipping Installation..."
+  echo " e za installed, Skipping installation..."
 fi

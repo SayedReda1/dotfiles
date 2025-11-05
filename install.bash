@@ -27,25 +27,27 @@ fi
 
 if ! command -v "fzf" >/dev/null 2>&1; then
   echo_colored " Installing fzf..."
-  sudo apt update -y
-  sudo apt install stow -y
+  sudo apt install fzf -y
 fi
 
 # Showing installation prompt
 SELECTED_PACKAGES=$(
   find . -maxdepth 1 -mindepth 1 -type d ! -name '.*' -printf '%P\n' |
-    fzf --multi --reverse --prompt "Select dotfiles [Tab/Shift+Tab]: "
+    fzf --multi --reverse --prompt "Select config packages [Tab to select]: "
 )
 
 # Installing all packages with stow
 for config in $SELECTED_PACKAGES; do
-  echo_colored " Applying '$config' config..."
-  # Installing dependencies
-  if [ -e ".install-dependencies/$config.sh" ]; then
-    sh ".setup-scripts/$config.sh"
-  fi
+  echo_colored " Applying '$config' config and installing all dependencies..."
   # Creating the symlinks
   stow -t ~ -D -S "$config"
+
+  # Installing dependencies
+  if [ -e ".install-dependencies/$config.sh" ]; then
+    bash ".setup-scripts/$config.bash"
+  fi
+
+  echo_colored "󱋌 Package '$config' has been installed successfully."
 done
 
-echo_colored " Done"
+echo_colored "󱜙 All Done"
