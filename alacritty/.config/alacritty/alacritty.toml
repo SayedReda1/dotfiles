@@ -5,17 +5,16 @@ import = [
 
 [terminal.shell]
 program = "/usr/bin/tmux"
-# args = ["--login"]
 
 [font]
-size = 15.0
+size = 13.0
 
 [font.normal]
 family = "JetBrainsMono Nerd Font"
 style = "Regular"
 
 [window]
-opacity = 0.9
+opacity = 1
 dynamic_padding = true
 startup_mode = "Maximized"
 #[colors.primary]
