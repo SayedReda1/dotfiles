@@ -129,6 +129,7 @@ alias pwninit="pwninit --template-path /home/sayed/.config/pwninit/template.py"
 # Variables
 export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
 export PATH="$PATH:/home/sayed/.local/bin"
+export PATH="$PATH:/usr/local/go/bin"
 export PWNDBG_NO_AUTOUPDATE=1
 
 # fzf
