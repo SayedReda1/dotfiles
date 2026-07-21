@@ -4,7 +4,7 @@
 
 # fastfetch
 
-figlet -c -w $(tput cols) -fslant "Pwn Guy" | lolcat -pad 1
+# figlet -c -w $(tput cols) -fslant "Pwn Guy" | lolcat -pad 1
 
 # figlet -c -w $(tput cols) -fslant "Sponge Bob" | lolcat -pad 1
 
@@ -141,18 +141,11 @@ if ! shopt -oq posix; then
   fi
 fi
 
-# nvm
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"                   # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # This loads nvm bash_completion
-
-# starship
-eval "$(starship init bash)"
-
 # env
 export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
+export PATH="$PATH:/usr/local/go/bin"
+export PATH="$PATH:$(go env GOPATH)/bin"
 export PWNDBG_NO_AUTOUPDATE=1
 
 # fzf
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
-# . "$HOME/.cargo/env"
+command -v fzf >/dev/null && eval "$(fzf --bash)"
