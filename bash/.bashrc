@@ -66,7 +66,7 @@ esac
 # uncomment for a colored prompt, if the terminal has the capability; turned
 # off by default to not distract the user: the focus in a terminal window
 # should be on the output of commands, not on the prompt
-#force_color_prompt=yes
+force_color_prompt=yes
 
 if [ -n "$force_color_prompt" ]; then
   if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
@@ -121,15 +121,6 @@ alias clip="xclip -selection clipboard"
 #   sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
-# Alias definitions.
-# You may want to put all your additions into a separate file like
-# ~/.bash_aliases, instead of adding them here directly.
-# See /usr/share/doc/bash-doc/examples in the bash-doc package.
-
-if [ -f ~/.bash_aliases ]; then
-  . ~/.bash_aliases
-fi
-
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
@@ -147,5 +138,17 @@ export PATH="$PATH:/usr/local/go/bin"
 export PATH="$PATH:$(go env GOPATH)/bin"
 export PWNDBG_NO_AUTOUPDATE=1
 
+. "$HOME/.local/bin/env"
+
 # fzf
 command -v fzf >/dev/null && eval "$(fzf --bash)"
+
+# zoxide
+eval "$(zoxide init bash)"
+
+# >>> Codex installer >>>
+export PATH="/home/sayed/.local/bin:$PATH"
+# <<< Codex installer <<<
+
+# opencode
+export PATH=/home/sayed/.opencode/bin:$PATH
