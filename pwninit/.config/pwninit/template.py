@@ -15,7 +15,10 @@ def conn():
     if args.LOCAL:
         r = process({proc_args})
         if args.GDB:
-            gdb.attach(r, gdbscript=gdbscript)
+            r = gdb.debug(
+                [exe.path],
+                gdbscript=gdbscript
+            )
     else:
         r = remote("addr", 1337)
 
