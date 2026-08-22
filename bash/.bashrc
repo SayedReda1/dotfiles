@@ -138,17 +138,8 @@ export PATH="$PATH:/usr/local/go/bin"
 export PATH="$PATH:$(go env GOPATH)/bin"
 export PWNDBG_NO_AUTOUPDATE=1
 
-. "$HOME/.local/bin/env"
-
 # fzf
 command -v fzf >/dev/null && eval "$(fzf --bash)"
 
 # zoxide
 eval "$(zoxide init bash)"
-
-# >>> Codex installer >>>
-export PATH="/home/sayed/.local/bin:$PATH"
-# <<< Codex installer <<<
-
-# opencode
-export PATH=/home/sayed/.opencode/bin:$PATH
