@@ -14,14 +14,11 @@ c
 def conn():
     if args.LOCAL:
         if args.GDB:
-            r = gdb.debug(
-                [exe.path],
-                gdbscript=gdbscript
-            )
+            r = gdb.debug([exe.path], gdbscript=gdbscript)
         else:
             r = process([exe.path])
     else:
-        r = remote("addr", 1337)
+        r = remote(args.HOST or "addr", args.PORT or 1337)
 
     return r
 
